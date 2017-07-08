@@ -1,18 +1,5 @@
 $(document).ready(function() {
-	/*var dibujarPokes = function(data){
-		var poke = "";
-		var url = "";
-		data.forEach(function(element){
-			poke = element.images.downsized_large.url;
-			url = element.bitly_gif_url;
-		   $("#elementos").append(armarTemplate(poke , url));
-		});
-	}
-
-	var armarTemplate = function(poke,url){
-		var t = "<div class='elemento'><img src='" + poke + "'/><a href='" + url +"'>Ver más</a></div>"
-		return t;
-	}*/
+	
 
 	var ajaxPoke = function(poke){
 		$.ajax({
@@ -24,10 +11,11 @@ $(document).ready(function() {
 
 		.done(function(response){
 			response.results.forEach(function(el){
-				$("#elementos").append("<div class='col-lg-3 tarjetas'><img src='https://img.pokemondb.net/sprites/x-y/normal/"+ el.name +".png' alt=‘"+el.name+"'><h5>"+el.name+"</h5></div>");
+				$("#elementos").append("<div class='col-lg-3 tarjetas'><img src='https://img.pokemondb.net/sprites/x-y/normal/"+ el.name +".png' alt=‘"+el.name+"'><h5 class='text-uppercase'>"+el.name+"</h5></div>");
 
-			})
-			console.log('response');
+		})
+
+		console.log('response');
 	
 		})
 
@@ -38,10 +26,31 @@ $(document).ready(function() {
 		
 	}
 
-	/*$("#buscar").click(function(event) {
-		console.log("Entro");
-		var poke = $("#poke-text").val();
-		ajaxpoke(poke);
-	});*/
 	ajaxPoke();
+	
+    /*llamando info para crear modal (no terminado)
+
+    var ajaxId = function(id){
+    	$.$.ajax({
+    		url: '/path/to/file',
+    		type: 'default GET (Other values: POST)',
+    		dataType: 'json',
+    		data: {param1: 'value1'},
+    	})
+    	.done(function() {
+    		console.log("success");
+    	})
+    	.fail(function() {
+    		console.log("error");
+    	})
+    	.always(function() {
+    		console.log("complete");
+    	});
+    	
+
+    }*/
+
+	
+
+	
 });
