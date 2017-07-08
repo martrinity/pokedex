@@ -1,1 +1,18 @@
-style.css
+body{
+	background-color: #F9455E;
+	display: inline-flex;
+}
+
+.buscar{
+	background-color: transparent;
+	
+}
+
+.form-control{
+	border: 0px solid;
+	background-color: transparent;
+}
+
+.tarjetas img{
+	display: table;
+}
