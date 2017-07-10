@@ -1,6 +1,10 @@
+*{
+	margin: 0;
+	padding: 0;
+}
 body{
-	background-color: #F9455E;
-	display: inline-flex;
+	background-color: #ffb2b2;
+	
 }
 
 .buscar{
@@ -13,6 +17,6 @@ body{
 	background-color: transparent;
 }
 
-.tarjetas img{
-	display: table;
+.tarjetas{
+	background-color: transparent;
 }

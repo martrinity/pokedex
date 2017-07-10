@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 		.done(function(response){
 			response.results.forEach(function(el){
-				$("#elementos").append("<div class='col-lg-4 tarjetas'><img src='https://img.pokemondb.net/sprites/x-y/normal/"+ el.name +".png' alt=‘"+el.name+" class='img-thumbnail'><h5 class='text-uppercase'>"+el.name+"</h5></div>");
+				$("#elementos").append("<div class='col-md-3 col-sm-4 tarjetas'><img src='https://img.pokemondb.net/sprites/x-y/normal/"+ el.name +".png' alt=‘"+el.name+" class='img-thumbnail'><h5 class='text-uppercase'>"+el.name+"</h5></div>");
 
 		})
 
@@ -31,7 +31,7 @@ $(document).ready(function() {
     /*llamando info para crear modal (no terminado)
 
     var ajaxId = function(id){
-    	$.$.ajax({
+    	$.ajax({
     		url: '/path/to/file',
     		type: 'default GET (Other values: POST)',
     		dataType: 'json',
